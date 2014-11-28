@@ -1,6 +1,3 @@
-// sbt-dependency-graph settings
-net.virtualvoid.sbt.graph.Plugin.graphSettings
-
 // sbt-release settings
 releaseSettings
 
@@ -12,15 +9,16 @@ description := "Opinionated, idiomatic Scala library for Amazon Web Services."
 
 homepage := Some(url("https://github.com/cloudify/scalazon"))
 
-scalaVersion := "2.10.3"
+scalaVersion := "2.11.4"
 
 licenses += ( "MIT" -> url("http://opensource.org/licenses/MIT") )
 
 unmanagedSourceDirectories in Compile += baseDirectory.value / "examples"
 
+
 libraryDependencies ++= Seq(
-  "com.amazonaws"       % "aws-java-sdk"    % "1.8.9",
-  "org.scalatest"      %% "scalatest"       % "2.0"     % "test",
+  "com.amazonaws" % "aws-java-sdk" % "1.9.8",
+  "org.scalatest" % "scalatest_2.11" % "2.2.1" % "test",
   "org.mockito"         % "mockito-all"     % "1.9.0"   % "test"
 )
 
